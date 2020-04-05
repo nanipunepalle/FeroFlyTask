@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
+    @ObservedObject var orderDataModel = OrderDataModel()
     var body: some View {
         NavigationView{
             GeometryReader { geo in
                 ScrollView{
                     VStack{
-                        TopView()
-                        OrderInfoView()
-                        AddressView()
+                        TopView(quantity: self.orderDataModel.quantity)
+                        OrderInfoView(orderId: self.orderDataModel.orderID, orderDate: self.orderDataModel.orderDate, paymentMode: self.orderDataModel.paymentMode)
+                        AddressView(addressType: self.orderDataModel.addressType, address: self.orderDataModel.address, instructions: self.orderDataModel.instruction)
                         Divider()
                         ProgressView().frame( height: 45)
                         BottomView()
@@ -42,7 +42,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct TopView: View {
     @State var screenWidth: CGFloat = 0
-    
+    @State var quantity: Int
     var body: some View {
         HStack(spacing: 5){
             Image("food").resizable()
@@ -52,7 +52,7 @@ struct TopView: View {
                 .frame(width: 80, height: 80, alignment: .leading)
                 .padding(.top)
             VStack(alignment: .leading,spacing: 2){
-                Text("2 items ordered").font(Font.custom("Calibri Regular", size: screenWidth*0.045 ))
+                Text("\(quantity) items ordered").font(Font.custom("Calibri Regular", size: screenWidth*0.045 ))
                 Button(action: {}) {
                     Text("See Details")
                     Image(systemName: "chevron.right")
@@ -69,6 +69,10 @@ struct TopView: View {
 //This view contains entire address view
 
 struct AddressView: View {
+    @State var addressType: String
+    @State var address: String
+    @State var instructions: String
+    
     @State var screenWidth: CGFloat = 0
     var body: some View {
         VStack{
@@ -77,11 +81,11 @@ struct AddressView: View {
                     .foregroundColor(Color("ButtonColor"))
                     .font(.system(size: 40)).padding(.top).offset(x: 0, y: 10)
                 VStack(alignment: .leading){
-                    Text("OFFICE").bold().padding(.bottom).padding(.top)
-                    Text("2nd floor,Hno 12,Back side of MGS Hospital,West Punjabi,Delhi,11206,India")
+                    Text("\(addressType)").bold().padding(.bottom).padding(.top)
+                    Text("\(address)")
                         .padding(.bottom).font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                         .fixedSize(horizontal: false, vertical: true)
-                    Text("Instruction: Call on arrival,bring cutlery").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
+                    Text(instructions).font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                 }
                 Spacer()
             }.padding()
@@ -94,30 +98,33 @@ struct AddressView: View {
 //Order info View
 
 struct OrderInfoView: View {
+    @State var orderId: String
+    @State var orderDate: String
+    @State var paymentMode: String
+    
     @State var screenWidth: CGFloat = 0
     var body: some View {
-
-
+        
         VStack{
             VStack{
                 Divider()
                 HStack{
                     Text("Orderid ").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                     Spacer()
-                    Text("ORDERNUMBER4867392208600039").font(Font.custom("Calibri Regular", size: screenWidth*0.035 ))
+                    Text("\(orderId)").font(Font.custom("Calibri Regular", size: screenWidth*0.035 ))
 
                 }.padding(.leading).padding(.trailing)
                 Divider()
                 HStack{
                     Text("OrderDate").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                     Spacer()
-                    Text("Oct 23,2019 9:08PM").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
+                    Text("\(orderDate)").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                 }.padding(.leading).padding(.trailing)
                 Divider()
                 HStack{
-                    Text("OrderDate").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
+                    Text("Payment Mode").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                     Spacer()
-                    Text("Oct 23,2019 9:08PM").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
+                    Text("\(paymentMode)").font(Font.custom("Calibri Regular", size: screenWidth*0.04 ))
                 }.padding(.leading).padding(.trailing)
                 Divider()
             }
@@ -147,6 +154,7 @@ struct ReportIssueButtonView: View {
 
 //This view contains Track button and order status
 struct BottomView: View {
+    
     @State var selection: Int? = nil
     @State var screenWidth: CGFloat = 0
     var body: some View {

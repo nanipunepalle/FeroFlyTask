@@ -11,13 +11,15 @@ import MapKit
 
 struct MapView: UIViewRepresentable{
     
+    @ObservedObject var orderDataModel = OrderDataModel()
+    
     func makeUIView(context: Context) -> MKMapView {
            MKMapView(frame: .zero)
        }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         let coordinate = CLLocationCoordinate2D(
-            latitude: 28.569130, longitude: 77.198059)
+            latitude: orderDataModel.locationLatitude, longitude: orderDataModel.locationLongitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         let annotation = MKPointAnnotation()

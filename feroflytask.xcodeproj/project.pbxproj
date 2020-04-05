@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D8A923C2439E0520069B2AD /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A923B2439E0520069B2AD /* ProgressModel.swift */; };
+		3D8A923F2439ED7F0069B2AD /* OrderDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A923E2439ED7F0069B2AD /* OrderDataModel.swift */; };
+		3D8A92412439F3110069B2AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A92402439F3110069B2AD /* Constants.swift */; };
 		3DB4A0A92439CF5A00435854 /* Calibri Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */; };
 		3DE361CF2438C14A0010D5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */; };
 		3DE361D12438C14A0010D5A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361D02438C14A0010D5A2 /* SceneDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D8A923B2439E0520069B2AD /* ProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressModel.swift; sourceTree = "<group>"; };
+		3D8A923E2439ED7F0069B2AD /* OrderDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDataModel.swift; sourceTree = "<group>"; };
+		3D8A92402439F3110069B2AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri Regular.ttf"; sourceTree = "<group>"; };
 		3DE361CB2438C14A0010D5A2 /* feroflytask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feroflytask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D8A923D2439E2770069B2AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A923B2439E0520069B2AD /* ProgressModel.swift */,
+				3D8A923E2439ED7F0069B2AD /* OrderDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D8A92422439F3190069B2AD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A92402439F3110069B2AD /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3DB4A0AA2439DD6E00435854 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3DB4A0AB2439DD7800435854 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DE361E72438E4F10010D5A2 /* ProgressView.swift */,
+				3DE361D52438C14A0010D5A2 /* ContentView.swift */,
+				3DE361E52438DE340010D5A2 /* MapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3DE361C22438C14A0010D5A2 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +107,10 @@
 			children = (
 				3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */,
 				3DE361D02438C14A0010D5A2 /* SceneDelegate.swift */,
-				3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */,
-				3DE361D52438C14A0010D5A2 /* ContentView.swift */,
-				3DE361E72438E4F10010D5A2 /* ProgressView.swift */,
-				3DE361E52438DE340010D5A2 /* MapView.swift */,
+				3D8A92422439F3190069B2AD /* Utilities */,
+				3DB4A0AA2439DD6E00435854 /* Fonts */,
+				3D8A923D2439E2770069B2AD /* Model */,
+				3DB4A0AB2439DD7800435854 /* Views */,
 				3DE361D72438C14C0010D5A2 /* Assets.xcassets */,
 				3DE361DC2438C14C0010D5A2 /* LaunchScreen.storyboard */,
 				3DE361DF2438C14C0010D5A2 /* Info.plist */,
@@ -162,9 +203,12 @@
 				3DE361D42438C14A0010D5A2 /* feroflytask.xcdatamodeld in Sources */,
 				3DE361CF2438C14A0010D5A2 /* AppDelegate.swift in Sources */,
 				3DE361E62438DE340010D5A2 /* MapView.swift in Sources */,
+				3D8A923C2439E0520069B2AD /* ProgressModel.swift in Sources */,
 				3DE361D62438C14A0010D5A2 /* ContentView.swift in Sources */,
 				3DE361D12438C14A0010D5A2 /* SceneDelegate.swift in Sources */,
+				3D8A923F2439ED7F0069B2AD /* OrderDataModel.swift in Sources */,
 				3DE361E82438E4F10010D5A2 /* ProgressView.swift in Sources */,
+				3D8A92412439F3110069B2AD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
