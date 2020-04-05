@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DB4A0A92439CF5A00435854 /* Calibri Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */; };
 		3DE361CF2438C14A0010D5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */; };
 		3DE361D12438C14A0010D5A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361D02438C14A0010D5A2 /* SceneDelegate.swift */; };
 		3DE361D42438C14A0010D5A2 /* feroflytask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361D22438C14A0010D5A2 /* feroflytask.xcdatamodeld */; };
@@ -14,9 +15,12 @@
 		3DE361D82438C14C0010D5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE361D72438C14C0010D5A2 /* Assets.xcassets */; };
 		3DE361DB2438C14C0010D5A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE361DA2438C14C0010D5A2 /* Preview Assets.xcassets */; };
 		3DE361DE2438C14C0010D5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE361DC2438C14C0010D5A2 /* LaunchScreen.storyboard */; };
+		3DE361E62438DE340010D5A2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361E52438DE340010D5A2 /* MapView.swift */; };
+		3DE361E82438E4F10010D5A2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE361E72438E4F10010D5A2 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Calibri Regular.ttf"; sourceTree = "<group>"; };
 		3DE361CB2438C14A0010D5A2 /* feroflytask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = feroflytask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE361D02438C14A0010D5A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		3DE361DA2438C14C0010D5A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3DE361DD2438C14C0010D5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE361DF2438C14C0010D5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE361E52438DE340010D5A2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		3DE361E72438E4F10010D5A2 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,10 @@
 			children = (
 				3DE361CE2438C14A0010D5A2 /* AppDelegate.swift */,
 				3DE361D02438C14A0010D5A2 /* SceneDelegate.swift */,
+				3DB4A0A82439CF5A00435854 /* Calibri Regular.ttf */,
 				3DE361D52438C14A0010D5A2 /* ContentView.swift */,
+				3DE361E72438E4F10010D5A2 /* ProgressView.swift */,
+				3DE361E52438DE340010D5A2 /* MapView.swift */,
 				3DE361D72438C14C0010D5A2 /* Assets.xcassets */,
 				3DE361DC2438C14C0010D5A2 /* LaunchScreen.storyboard */,
 				3DE361DF2438C14C0010D5A2 /* Info.plist */,
@@ -139,6 +148,7 @@
 				3DE361DE2438C14C0010D5A2 /* LaunchScreen.storyboard in Resources */,
 				3DE361DB2438C14C0010D5A2 /* Preview Assets.xcassets in Resources */,
 				3DE361D82438C14C0010D5A2 /* Assets.xcassets in Resources */,
+				3DB4A0A92439CF5A00435854 /* Calibri Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +161,10 @@
 			files = (
 				3DE361D42438C14A0010D5A2 /* feroflytask.xcdatamodeld in Sources */,
 				3DE361CF2438C14A0010D5A2 /* AppDelegate.swift in Sources */,
+				3DE361E62438DE340010D5A2 /* MapView.swift in Sources */,
 				3DE361D62438C14A0010D5A2 /* ContentView.swift in Sources */,
 				3DE361D12438C14A0010D5A2 /* SceneDelegate.swift in Sources */,
+				3DE361E82438E4F10010D5A2 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
